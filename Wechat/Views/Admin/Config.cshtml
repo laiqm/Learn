@@ -1,0 +1,24 @@
+﻿@model Wechat.Entities.CleanConfig
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Config</title>
+</head>
+<body>
+    <form method="post">
+        <label>消息头 @Html.TextAreaFor(m=>m.MessagePrefix)</label>
+        <label>消息尾 @Html.TextAreaFor(m => m.MessageSuffix)</label>
+        <label>登录尝试次数 @Html.TextBoxFor(m => m.CheckLoginRetryCount)</label>
+        <label>发消息间隔 @Html.TextBoxFor(m => m.SendMsgInteval)</label>
+        <label>发消息失败尝试间隔 @Html.TextBoxFor(m => m.SendMsgFailRetryInteval)</label>
+        <label>发消息失败尝试次数 @Html.TextBoxFor(m => m.SendMsgFailRetryCount)</label>
+    </form>
+</body>
+</html>

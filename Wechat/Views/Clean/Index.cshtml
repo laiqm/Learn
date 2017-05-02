@@ -1,0 +1,38 @@
+﻿<div class="weui-cells__title">清理步骤：1.扫二维码/2.选择要屏蔽的好友/<b color="#000;">3.自定义消息</b></div>
+<div style="padding:40px">
+    <h3>自定义消息内容</h3>
+    <div class="weui-cells__title">清理过程需要群发消息，您可以自定义修改消息内容</div>
+</div>
+<div class="weui-cells__title">输入消息内容</div>
+<form action="/Clean/Create" method="post">
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea name="content" class="weui-textarea" placeholder="请输入文本" rows="5">感谢您一直把我留在您的好友列表里，系统正在检测删除我的人，请勿回复。。  </textarea>
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                @Html.TextArea("Suffix", "僵尸粉检测技术支持:\r\nhttp://www.kaolaproxy.cn/ \r\n打开链接，自助清理死粉", new {@class="weui-textarea",placeholder="请输入文本",rows=5 })
+                @*<textarea name="Suffix" class="weui-textarea" placeholder="请输入文本" rows="5"></textarea>*@
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea name="filter" class="weui-textarea" placeholder="输入要过滤的关键词，用逗号隔开" rows="5"></textarea>
+                <div class="weui-textarea-counter"><span>0</span>/200</div>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">跳过个数</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" name="skip" type="number" pattern="[0-9]*" placeholder="请输入你要跳过检测的人数" />
+            </div>
+        </div>
+    </div>
+    <div style="padding-top:60px;" class="weui-btn-area">
+        <input type="submit" class="weui-btn weui-btn_primary" value="下一步" />
+    </div>
+</form>

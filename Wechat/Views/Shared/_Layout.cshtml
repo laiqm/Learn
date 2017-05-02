@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>专业微信辅助</title>
+    <!-- 引入 WeUI -->
+    <link rel="stylesheet" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+    @RenderSection("css", false)
+</head>
+<body class="container">
+    <!-- 使用 WeUI -->
+    @RenderBody()
+    <div class="weui-footer">
+        <p class="weui-footer__text">Copyright &copy; 2017 财富自由奋斗</p>
+        <p>专业制作微信辅助工具，关注公众号(caifuziyoufendou)了解更多</p>
+    </div>
+    @RenderSection("scripts", false)
+</body>
+</html>
